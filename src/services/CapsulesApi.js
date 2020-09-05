@@ -45,16 +45,14 @@ export default class CapsulesApi {
     return new Promise((resolve) => {
       setTimeout(() => {
         const storedCapsules = localStorage.getItem("capsules");
+        const capsule = { id: storedCapsules.length + 1, ...newCapsule };
 
         localStorage.setItem(
           "capsules",
-          JSON.stringify([
-            ...JSON.parse(storedCapsules),
-            { id: storedCapsules.length + 1, ...newCapsule },
-          ])
+          JSON.stringify([...JSON.parse(storedCapsules), capsule])
         );
 
-        resolve({ status: 201, message: "ok" });
+        resolve(capsule);
       }, LATENCY);
     });
   }
