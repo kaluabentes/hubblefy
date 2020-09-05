@@ -8,3 +8,5 @@ export const COLOR_RED = "#EB5757";
 export const COLOR_CONCRETE = "#F2F2F2";
 export const COLOR_GRAY = "#828282";
 export const COLOR_MERCURY = "#E5E5E5";
+export const COLOR_ALTO = "#DDDDDD";
+export const COLOR_DUSTY_GRAY = "#979797";
