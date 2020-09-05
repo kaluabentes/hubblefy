@@ -19,7 +19,7 @@ import googlesheet from "./googlesheet.svg";
 import googledoc from "./googledoc.svg";
 import text from "./text.svg";
 
-const Props = {
+export const Props = {
   title: PropTypes.string.isRequired,
   notificationCount: PropTypes.number.isRequired,
   attachments: PropTypes.arrayOf(
@@ -67,7 +67,7 @@ export default function CapsuleCard({
       <Footer>
         <AttachmentGroup>
           {attachments.map((att) => (
-            <AttachmentButton>
+            <AttachmentButton key={att.type}>
               <AttachmentImage
                 src={AttachmentImageMap[att.type]}
                 alt={att.type}
