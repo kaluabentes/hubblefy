@@ -4,7 +4,7 @@ import { LATENCY } from "config/mockServer";
 const newCapsule = {
   title: "Conheça mais sobre o Hubblefy",
   isFixed: false,
-  isRead: false,
+  isRead: true,
   status: "signed",
   createdAt: "1 hora atrás",
   notificationCount: 12,
