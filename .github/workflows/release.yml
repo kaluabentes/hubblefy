@@ -10,6 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v1
+
       - name: Deploy to Neflify
         uses: jsmrcaga/action-netlify-deploy@v1.1.0
         with:
