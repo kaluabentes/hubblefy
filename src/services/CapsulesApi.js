@@ -1,6 +1,5 @@
 import capsules from "data/capsules";
-
-const LATENCY = 3000;
+import { LATENCY } from "config/mockServer";
 
 const newCapsule = {
   title: "Conheça mais sobre o Hubblefy",
