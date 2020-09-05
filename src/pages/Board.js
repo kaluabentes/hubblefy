@@ -4,7 +4,6 @@ import AppLayout from "layouts/AppLayout";
 import CapsuleSection from "components/CapsuleSection";
 import CapsuleCard from "components/CapsuleCard";
 import CategoriesApi from "services/CategoriesApi";
-import CapsulesApi from "services/CapsulesApi";
 import { useCapsules } from "contexts/capsules";
 
 export default function Board() {
