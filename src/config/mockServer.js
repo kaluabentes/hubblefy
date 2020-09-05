@@ -1,1 +1,1 @@
-export const LATENCY = 3000;
+export const LATENCY = 2000;
