@@ -11,15 +11,12 @@ export default [
     attachments: [
       {
         type: "text",
-        url: "#",
       },
       {
         type: "googlesheet",
-        url: "#",
       },
       {
         type: "googledoc",
-        url: "#",
       },
     ],
   },
@@ -35,15 +32,12 @@ export default [
     attachments: [
       {
         type: "text",
-        url: "#",
       },
       {
         type: "googlesheet",
-        url: "#",
       },
       {
         type: "googledoc",
-        url: "#",
       },
     ],
   },
@@ -59,15 +53,12 @@ export default [
     attachments: [
       {
         type: "text",
-        url: "#",
       },
       {
         type: "googlesheet",
-        url: "#",
       },
       {
         type: "googledoc",
-        url: "#",
       },
     ],
   },
@@ -83,15 +74,12 @@ export default [
     attachments: [
       {
         type: "text",
-        url: "#",
       },
       {
         type: "googlesheet",
-        url: "#",
       },
       {
         type: "googledoc",
-        url: "#",
       },
     ],
   },
