@@ -21,7 +21,7 @@ export default function Sidenav({ isTipOpen, items }) {
     <Container isTipOpen={isTipOpen}>
       <Logo src={icon} alt="Hubblefy" />
       {items.map((item) => (
-        <NavItem onClick={item.onClick}>
+        <NavItem key={item.icon} onClick={item.onClick}>
           <Icon>{item.icon}</Icon>
         </NavItem>
       ))}
