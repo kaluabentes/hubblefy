@@ -8,7 +8,7 @@ const Props = {
   isOpen: PropTypes.bool.isRequired,
   title: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
-  onClose: PropTypes.string.isRequired,
+  onClose: PropTypes.func.isRequired,
 };
 
 export default function Tip({ tipRef, isOpen, title, text, onClose }) {
