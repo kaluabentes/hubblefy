@@ -81,9 +81,9 @@ export default function Board() {
         </CapsuleSection>
         {categories.map((category) => (
           <CapsuleSection key={category.id} title={category.title}>
-            {getCapsulesByCategory(category.id).map((cap) =>
-              renderCapsule(cap)
-            )}
+            {getCapsulesByCategory(category.id)
+              .filter((cap) => cap.isRead)
+              .map((cap) => renderCapsule(cap))}
           </CapsuleSection>
         ))}
       </>
