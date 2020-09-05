@@ -8,6 +8,7 @@ import ProfileWidget from "components/ProfileWidget";
 import profile from "images/profile.png";
 import { Container, Main, InnerContainer } from "./styles";
 import { useCapsules } from "contexts/capsules";
+import SearchPanel from "components/SearchPanel";
 
 const Props = {
   children: PropTypes.node.isRequired,
@@ -40,9 +41,10 @@ export default function AppLayout({ children }) {
     icon: "search",
     onClick: () => setIsSearchPanelOpen(true),
   };
-  const [{ isAdding }, addCapsule] = useCapsules();
+  const [{ isAdding, capsules }, addCapsule] = useCapsules();
   const [tipHeight, setTipHeight] = useState(0);
   const tipRef = useRef();
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     if (tipRef.current) {
@@ -69,6 +71,13 @@ export default function AppLayout({ children }) {
       </InnerContainer>
       <Sidenav isTipOpen={isTipOpen} items={[...ITEMS, searchItem]} />
       <ProfileWidget avatar={profile} name="Lew S." />
+      <SearchPanel
+        isOpen={isSearchPanelOpen}
+        recent={capsules.slice(0, 3)}
+        value={search}
+        onChange={(event) => setSearch(event.target.value)}
+        onClose={() => setIsSearchPanelOpen(false)}
+      />
     </Container>
   );
 }
